@@ -146,8 +146,8 @@ h3,
 }
 
 .topbar {
-  border-bottom: 1px solid var(--line);
-  background: rgba(238, 242, 248, 0.94);
+  border-bottom: 1px solid #cfdcf0;
+  background: linear-gradient(90deg, rgba(229, 239, 255, 0.96), rgba(236, 246, 255, 0.96));
   backdrop-filter: blur(4px);
 }
 
@@ -314,15 +314,15 @@ h3,
 
 .trust-bubbles span:first-child {
   margin-left: 0;
-  background: #cfd7e4;
+  background: #13b679;
 }
 
 .trust-bubbles span:nth-child(2) {
-  background: #afbccf;
+  background: #20b8dd;
 }
 
 .trust-bubbles span:nth-child(3) {
-  background: #8ea0bc;
+  background: #2f66f5;
 }
 
 .hero-window {
@@ -459,8 +459,8 @@ h3,
 }
 
 .product-card {
-  background: var(--surface-soft);
-  border: 1px solid #e4e8f0;
+  background: linear-gradient(180deg, #dce9ff 0%, #d2e3ff 100%);
+  border: 1px solid #b9cdef;
   border-radius: 14px;
   padding: 18px;
 }
@@ -637,16 +637,11 @@ h3,
 
 .collage-main {
   min-height: 352px;
-  padding: 20px;
+  padding: 0;
   border-radius: 14px;
-  border: 3px solid #2f66f5;
-  background: linear-gradient(150deg, #b2dbc6 0%, #b7dfcb 45%, #a1d0bd 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #3d5660;
-  text-align: center;
+  border: 1px solid #2a4f86;
+  background: #071b38;
+  overflow: hidden;
   position: relative;
 }
 
@@ -691,28 +686,21 @@ h3,
 .collage-photo {
   min-height: 186px;
   border-radius: 12px;
-  background:
-    radial-gradient(circle at 75% 20%, rgba(223, 244, 248, 0.55) 0 20%, transparent 45%),
-    linear-gradient(135deg, #b8d6c3 0%, #87aea1 100%);
+  background: #081a35;
   position: relative;
+  overflow: hidden;
 }
 
 .collage-photo::before {
-  content: "";
-  position: absolute;
-  width: 92px;
-  height: 142px;
-  right: 36px;
-  bottom: 0;
-  border-radius: 38px 38px 16px 16px;
-  background: linear-gradient(180deg, #f0d6bc, #dfba99);
-  box-shadow: 0 -80px 0 -58px #3f5b5a;
+  content: none;
 }
 
 .collage-metric {
   border-radius: 12px;
-  padding: 24px 20px;
-  background: #b8ddd3;
+  min-height: 154px;
+  padding: 0;
+  background: #081a35;
+  overflow: hidden;
 }
 
 .collage-metric strong {
@@ -725,6 +713,14 @@ h3,
 .collage-metric span {
   color: #2f4b55;
   font-size: 13px;
+}
+
+.collage-media {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .services-copy h2 {
@@ -809,8 +805,8 @@ h3,
 }
 
 .site-footer {
-  border-top: 1px solid var(--line);
-  background: #e9eff7;
+  border-top: 1px solid #c9d6ea;
+  background: linear-gradient(180deg, #dfe9f7 0%, #d6e2f3 100%);
 }
 
 .footer-top {
@@ -838,12 +834,17 @@ h3,
   width: 30px;
   height: 30px;
   border-radius: 8px;
-  background: #d9e0ea;
-  color: #445672;
+  background: #d9f1e8;
+  color: #0f9165;
   font-size: 11px;
   font-weight: 800;
   display: grid;
   place-items: center;
+}
+
+.socials a:hover {
+  background: #c8eadc;
+  color: #0b7f58;
 }
 
 .footer-col {
@@ -870,7 +871,7 @@ h3,
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid #c9d6ea;
   padding: 16px 0 22px;
   display: flex;
   justify-content: space-between;
@@ -1388,19 +1389,8 @@ h3,
   min-height: 300px;
   border-radius: 10px;
   border: 4px solid #f3f5ec;
-  background:
-    radial-gradient(circle at 75% 30%, rgba(255, 255, 255, 0.4) 0 7%, transparent 12%),
-    radial-gradient(circle at 52% 55%, rgba(255, 255, 255, 0.35) 0 6%, transparent 11%),
-    linear-gradient(135deg, #d7e0cc 0%, #c8d4bf 100%);
+  background: center / cover no-repeat url("../assets/img/TeamNatal.png");
   box-shadow: 0 15px 38px rgba(41, 58, 78, 0.2);
-  display: grid;
-  place-items: center;
-}
-
-.about-team-panel span {
-  color: #3b524f;
-  font-size: 45px;
-  letter-spacing: 0.02em;
 }
 
 .about-history {
@@ -1666,6 +1656,13 @@ h3,
   display: block;
   font-size: 12px;
   margin-bottom: 7px;
+}
+
+.about-footer .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0;
 }
 
 .about-footer-socials {
@@ -1971,21 +1968,27 @@ h3,
 }
 
 .ps-side-panel.one {
-  background:
-    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.45) 0 16%, transparent 28%),
-    linear-gradient(135deg, #6ca4ed, #2b65d7);
+  background-image: url("../assets/img/ConciliacionInteligente.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #081a35;
 }
 
 .ps-side-panel.two {
-  background:
-    radial-gradient(circle at 75% 26%, rgba(255, 255, 255, 0.35) 0 12%, transparent 21%),
-    linear-gradient(135deg, #6ca6a9, #2d7e85);
+  background-image: url("../assets/img/AprobarConciliacion.png");
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: 112% auto;
+  background-color: #081a35;
 }
 
 .ps-side-panel.three {
-  background:
-    radial-gradient(circle at 62% 64%, rgba(255, 255, 255, 0.32) 0 16%, transparent 22%),
-    linear-gradient(135deg, #6a8fbe, #2f4f86);
+  background-image: url("../assets/img/AsignarVendedor.png");
+  background-repeat: no-repeat;
+  background-position: center 56%;
+  background-size: 140% auto;
+  background-color: #081a35;
 }
 
 .ps-mobile-title {
@@ -2030,7 +2033,8 @@ h3,
 }
 
 .ps-m-product-card {
-  background: #f6f8fc;
+  background: linear-gradient(180deg, #dce9ff 0%, #d2e3ff 100%);
+  border-color: #b9cdef;
 }
 
 .ps-mobile-main .m-services {
@@ -2048,11 +2052,10 @@ h3,
   align-items: center;
   position: relative;
   overflow: hidden;
+  color: #f5f7ff;
   background:
-    radial-gradient(circle at 14% 35%, rgba(143, 162, 194, 0.28) 0 22%, transparent 23%),
-    radial-gradient(circle at 52% 12%, rgba(166, 192, 200, 0.3) 0 7%, transparent 8%),
-    radial-gradient(circle at 88% 42%, rgba(121, 170, 154, 0.2) 0 28%, transparent 29%),
-    linear-gradient(130deg, #c8d6e5 0%, #d4e2ec 48%, #cbe5dc 100%);
+    linear-gradient(90deg, rgba(8, 23, 59, 0.9) 0%, rgba(12, 34, 72, 0.72) 48%, rgba(18, 40, 78, 0.58) 100%),
+    linear-gradient(130deg, #1a2e55 0%, #273d63 100%);
 }
 
 .contact-hero::before {
@@ -2060,8 +2063,8 @@ h3,
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(236, 242, 249, 0.74), rgba(236, 242, 249, 0.46)),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0 96px, rgba(216, 228, 240, 0.08) 96px 180px);
+    repeating-linear-gradient(90deg, rgba(15, 34, 69, 0.58) 0 88px, rgba(8, 25, 56, 0.18) 88px 184px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
 }
 
 .contact-hero-content {
@@ -2079,7 +2082,7 @@ h3,
 .contact-hero-content p {
   margin: 18px 0 0;
   max-width: 650px;
-  color: #344764;
+  color: #d2d9e9;
   font-size: 33px;
   line-height: 1.35;
 }
@@ -2152,22 +2155,22 @@ h3,
 
 .contact-info-item .main {
   margin: 0;
-  font-size: 28px;
-  line-height: 1.25;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
   color: #18253f;
 }
 
 .contact-info-item.is-email .main {
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact-info-item p {
   margin: 2px 0 0;
   color: #667790;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.35;
 }
 
@@ -2381,6 +2384,13 @@ h3,
   margin-top: 10px;
   color: #b6c5df;
   font-size: 15px;
+}
+
+.contact-footer .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
 }
 
 .contact-footer a:hover {
@@ -2660,14 +2670,12 @@ h3,
     font-size: 21px;
   }
 
-  .contact-info-item .main,
   .contact-field input,
   .contact-field select,
   .contact-field textarea {
     font-size: 22px;
   }
 
-  .contact-info-item p,
   .contact-field label {
     font-size: 18px;
   }
