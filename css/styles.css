@@ -1978,8 +1978,8 @@ h3,
 .ps-side-panel.two {
   background-image: url("../assets/img/AprobarConciliacion.png");
   background-repeat: no-repeat;
-  background-position: center 50%;
-  background-size: 112% auto;
+  background-position: center center;
+  background-size: cover;
   background-color: #081a35;
 }
 
