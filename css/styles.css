@@ -330,93 +330,15 @@ h3,
   overflow: hidden;
   border: 1px solid #162347;
   box-shadow: var(--shadow-soft);
+  background: #0d1d42;
 }
 
-.window-bar {
-  min-height: 26px;
-  padding: 0 10px;
-  background: #102247;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.window-bar span {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-}
-
-.window-bar span:first-child {
-  background: #f95f5f;
-}
-
-.window-bar span:nth-child(2) {
-  background: #ffd166;
-}
-
-.window-bar span:nth-child(3) {
-  background: #2bd576;
-}
-
-.hero-scene {
-  position: relative;
-  min-height: 422px;
-  background:
-    radial-gradient(circle at 18% 20%, rgba(183, 217, 196, 0.84) 0 20%, transparent 47%),
-    radial-gradient(circle at 85% 85%, rgba(12, 66, 87, 0.85) 0 23%, transparent 52%),
-    linear-gradient(128deg, #90afa2 0%, #4f746f 43%, #2b4c52 100%);
-  overflow: hidden;
-}
-
-.hero-scene::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 30%),
-    radial-gradient(circle at 60% 0, rgba(0, 22, 40, 0.32), transparent 45%);
-}
-
-.hero-figure {
-  position: absolute;
-  width: 250px;
-  height: 308px;
-  right: 72px;
-  bottom: -6px;
-  border-radius: 130px 130px 28px 28px;
-  background: linear-gradient(175deg, #2d6267 0%, #13444a 70%);
-  box-shadow: -40px -28px 70px rgba(6, 26, 44, 0.34);
-}
-
-.hero-head {
-  position: absolute;
-  width: 114px;
-  height: 124px;
-  right: 64px;
-  top: -94px;
-  border-radius: 52% 48% 50% 50%;
-  background: linear-gradient(170deg, #f2d3bc, #d5a787);
-}
-
-.hero-hair {
-  position: absolute;
-  width: 126px;
-  height: 100px;
-  right: 58px;
-  top: -98px;
-  border-radius: 58% 58% 42% 42%;
-  background: #293843;
-}
-
-.hero-beard {
-  position: absolute;
-  width: 86px;
-  height: 58px;
-  right: 76px;
-  top: -23px;
-  border-radius: 42px;
-  background: #314754;
+.hero-media {
+  width: 100%;
+  height: 422px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .section {
@@ -528,6 +450,14 @@ h3,
   height: 140px;
   border-radius: 8px;
   overflow: hidden;
+}
+
+.product-art-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .art-fluxia {
@@ -1965,30 +1895,16 @@ h3,
   border-radius: 14px;
   min-height: 110px;
   border: 1px solid #d8e2f0;
-}
-
-.ps-side-panel.one {
-  background-image: url("../assets/img/ConciliacionInteligente.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  overflow: hidden;
   background-color: #081a35;
 }
 
-.ps-side-panel.two {
-  background-image: url("../assets/img/AprobarConciliacion.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-color: #081a35;
-}
-
-.ps-side-panel.three {
-  background-image: url("../assets/img/AsignarVendedor.png");
-  background-repeat: no-repeat;
-  background-position: center 56%;
-  background-size: 140% auto;
-  background-color: #081a35;
+.ps-side-image {
+  width: 100%;
+  height: 110px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .ps-mobile-title {
