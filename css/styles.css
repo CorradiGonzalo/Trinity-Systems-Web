@@ -1317,9 +1317,14 @@ h3,
 
 .about-team-panel {
   min-height: 300px;
+  aspect-ratio: 3 / 2;
   border-radius: 10px;
   border: 4px solid #f3f5ec;
-  background: center / cover no-repeat url("../assets/img/TeamNatal.png");
+  background-color: #06101c;
+  background-image: url("../assets/img/TeamNatal.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   box-shadow: 0 15px 38px rgba(41, 58, 78, 0.2);
 }
 
@@ -1459,7 +1464,8 @@ h3,
 .about-team-grid {
   margin-top: 26px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, minmax(260px, 276px));
+  justify-content: center;
   gap: 16px;
 }
 
@@ -1468,20 +1474,25 @@ h3,
   border-radius: 10px;
   border: 2px solid #2f2f33;
   background-color: #7e7f82;
-  box-shadow: inset 0 -25px 45px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 18px rgba(20, 27, 44, 0.08);
+  overflow: hidden;
+}
+
+.about-member-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 68%;
+  image-rendering: auto;
 }
 
 .about-member-photo.m1 {
-  background:
-    radial-gradient(circle at 78% 75%, #d7d7d7 0 8%, transparent 11%),
-    radial-gradient(circle at 24% 78%, #d5d5d5 0 9%, transparent 11%),
-    linear-gradient(145deg, #7e7f82, #54565a);
+  background-color: #5c6067;
 }
 
 .about-member-photo.m2 {
-  background:
-    radial-gradient(circle at 56% 24%, #d2d3d7 0 12%, transparent 15%),
-    linear-gradient(150deg, #6f7176, #43454a);
+  background-color: #5c6067;
 }
 
 .about-member-photo.m3 {
