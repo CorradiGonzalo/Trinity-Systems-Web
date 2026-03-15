@@ -701,6 +701,112 @@ h3,
   line-height: 1.45;
 }
 
+.home-story {
+  padding: 72px 0;
+}
+
+.home-problem {
+  background: #f6f8fd;
+}
+
+.home-method {
+  background:
+    radial-gradient(circle at top, rgba(28, 71, 154, 0.12), transparent 34%),
+    #edf3fb;
+}
+
+.home-impact {
+  background: #e8eef7;
+}
+
+.section-head-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.section-head-center h2 {
+  max-width: 760px;
+}
+
+.story-grid {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.story-card,
+.impact-card {
+  min-height: 100%;
+  border-radius: 22px;
+  border: 1px solid #d4deec;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 16px 36px rgba(19, 35, 68, 0.08);
+}
+
+.story-card {
+  padding: 26px 24px;
+}
+
+.story-kicker,
+.story-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #dce7ff;
+  color: #1e55d4;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.story-step {
+  background: #dff5ea;
+  color: #0f9b69;
+}
+
+.story-card h3 {
+  margin: 18px 0 10px;
+  font-size: 24px;
+  line-height: 1.14;
+}
+
+.story-card p {
+  margin: 16px 0 0;
+  color: #566681;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.story-card-numbered p {
+  margin-top: 0;
+}
+
+.impact-card {
+  padding: 32px 26px;
+  text-align: center;
+}
+
+.impact-card strong {
+  display: block;
+  font-family: "Sora", sans-serif;
+  font-size: clamp(42px, 4vw, 64px);
+  line-height: 1;
+  color: #103f9f;
+}
+
+.impact-card span {
+  display: block;
+  margin-top: 12px;
+  color: #556681;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
 .cta-wrap {
   padding: 66px 0 72px;
   background: #eef3fa;
@@ -1052,6 +1158,25 @@ h3,
   color: #60708a;
   font-size: 16px;
   line-height: 1.35;
+}
+
+.m-story-block {
+  margin-top: 24px;
+}
+
+.m-story-block h2 {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.08;
+}
+
+.m-story-block .m-service-card {
+  margin-top: 12px;
+}
+
+.m-story-method .m-service-card,
+.m-story-impact .m-service-card {
+  background: #f7f9fc;
 }
 
 .m-icon-blue-soft {
@@ -2638,6 +2763,10 @@ h3,
 
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
   }
 
   .footer-top {
