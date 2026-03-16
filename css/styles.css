@@ -30,6 +30,7 @@ body {
   background: var(--bg-main);
   color: var(--text-main);
   font-family: "Manrope", "Segoe UI", sans-serif;
+  overflow-x: hidden;
 }
 
 img,
@@ -142,7 +143,7 @@ h3,
 }
 
 .mobile-site {
-  display: none;
+  display: none !important;
 }
 
 .topbar {
@@ -200,8 +201,7 @@ h3,
   color: #111a2f;
 }
 
-.about-footer .brand-name,
-.contact-footer .brand-name {
+.about-footer .brand-name {
   color: #f5f8ff;
 }
 
@@ -2273,30 +2273,30 @@ h3,
 }
 
 .contact-form-card {
-  border: 1px solid #d8e1ee;
+  border: 1px solid #c7d8ef;
   border-radius: 18px;
-  background: #f2f5fa;
-  box-shadow: 0 12px 32px rgba(24, 39, 78, 0.1);
-  padding: 34px 38px 36px;
+  background: linear-gradient(145deg, #e9f2ff 0%, #e6f4ef 100%);
+  box-shadow: 0 12px 32px rgba(24, 39, 78, 0.08);
+  padding: 36px 36px 32px;
   min-width: 0;
 }
 
 .contact-form-card h2 {
-  margin: 0 0 26px;
-  font-size: 43px;
-  line-height: 1.1;
+  margin: 0 0 22px;
+  font-size: clamp(34px, 3vw, 46px);
+  line-height: 1.08;
 }
 
 .contact-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px 20px;
+  gap: 16px 18px;
 }
 
 .contact-field label {
   display: block;
   margin-bottom: 8px;
-  font-size: 21px;
+  font-size: 16px;
   font-weight: 700;
   color: #182744;
 }
@@ -2307,12 +2307,12 @@ h3,
   width: 100%;
   border: 1px solid #ccd8ea;
   border-radius: 10px;
-  background: #f9fbfe;
+  background: #f7fbff;
   color: #18253f;
   font: inherit;
-  font-size: 26px;
+  font-size: 17px;
   line-height: 1.2;
-  padding: 17px 15px;
+  padding: 14px 14px;
   outline: none;
 }
 
@@ -2330,7 +2330,7 @@ h3,
 }
 
 .contact-field textarea {
-  min-height: 160px;
+  min-height: 210px;
   resize: vertical;
 }
 
@@ -2352,10 +2352,10 @@ h3,
 
 .contact-submit {
   grid-column: 1 / -1;
-  min-height: 62px;
+  min-height: 58px;
   margin-top: 8px;
   border-radius: 10px;
-  font-size: 28px;
+  font-size: 18px;
   letter-spacing: 0.02em;
   box-shadow: 0 10px 22px rgba(47, 102, 245, 0.3);
 }
@@ -2367,7 +2367,15 @@ h3,
 }
 
 .contact-cta-card {
+  border-radius: 20px;
+  background: radial-gradient(circle at 50% -20%, #0f2a65, #061334 64%);
+  padding: 66px 24px;
   text-align: center;
+  color: #fff;
+}
+
+.contact-cta-card .eyebrow {
+  color: #35e5b2;
 }
 
 .contact-cta-card h2 {
@@ -2379,7 +2387,7 @@ h3,
 .contact-cta-card > p {
   margin: 18px auto 0;
   max-width: 880px;
-  color: #415773;
+  color: #d1daf3;
   font-size: 33px;
   line-height: 1.42;
 }
@@ -2393,16 +2401,18 @@ h3,
 
 .contact-cta-actions .btn {
   min-height: 56px;
-  font-size: 24px;
+  font-size: 20px;
 }
 
-.contact-cta-actions .btn-soft {
-  border-color: #a9bfdc;
+.contact-cta-actions .btn-outline {
+  border-color: rgba(226, 233, 255, 0.3);
+  color: #fff;
 }
 
 .contact-footer {
-  background: #071334;
-  color: #a9b9d4;
+  border-top: 1px solid var(--line);
+  background: #e9eff7;
+  color: #5f6d86;
 }
 
 .contact-footer-grid {
@@ -2413,29 +2423,30 @@ h3,
 }
 
 .contact-footer .brand-name {
-  color: #ecf2ff;
+  color: #111a2f;
 }
 
 .contact-footer p {
   margin: 16px 0 0;
   max-width: 390px;
-  color: #8ea0bf;
-  font-size: 13px;
-  line-height: 1.7;
+  color: #61708b;
+  font-size: 14px;
+  line-height: 1.55;
 }
 
 .contact-footer h3 {
   margin: 0 0 10px;
-  font-size: 18px;
-  color: #13d49a;
-  letter-spacing: 0.04em;
+  color: #3f4f68;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  font-weight: 800;
 }
 
 .contact-footer a {
   display: block;
   margin-top: 10px;
-  color: #b6c5df;
-  font-size: 15px;
+  color: #5b6b86;
+  font-size: 14px;
 }
 
 .contact-footer .brand {
@@ -2446,7 +2457,7 @@ h3,
 }
 
 .contact-footer a:hover {
-  color: #d8e5fb;
+  color: #263d72;
 }
 
 .contact-footer-socials {
@@ -2458,7 +2469,7 @@ h3,
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background: #1a2a4d;
+  background: #d9e0ea;
   display: grid;
   place-items: center;
   margin-top: 0;
@@ -2466,19 +2477,21 @@ h3,
 
 .contact-footer-socials svg {
   width: 18px;
-  fill: #d8e5fb;
+  fill: #445672;
 }
 
 .contact-footer-bottom {
-  border-top: 1px solid rgba(144, 168, 209, 0.18);
+  border-top: 1px solid var(--line);
   min-height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
   flex-wrap: wrap;
-  color: #8ea3c5;
-  font-size: 12px;
+  color: #7f8da5;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .contact-footer-legal {
@@ -2488,8 +2501,8 @@ h3,
 
 .contact-footer-legal a {
   margin-top: 0;
-  color: #8ea3c5;
-  font-size: 12px;
+  color: #7f8da5;
+  font-size: 10px;
 }
 
 .contact-mobile-topbar {
@@ -2715,25 +2728,28 @@ h3,
 
   .contact-info-col h2,
   .contact-form-card h2 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .contact-info-item h3 {
-    font-size: 21px;
+    font-size: 19px;
   }
 
   .contact-field input,
   .contact-field select,
   .contact-field textarea {
-    font-size: 22px;
+    font-size: 16px;
   }
 
   .contact-field label {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .contact-submit,
-  .contact-cta-actions .btn,
+  .contact-cta-actions .btn {
+    font-size: 18px;
+  }
+
   .contact-cta-card > p {
     font-size: 22px;
   }
@@ -2832,113 +2848,304 @@ h3,
 }
 
 @media (max-width: 900px) {
-  .desktop-site {
-    display: none;
+  .container {
+    width: min(1160px, calc(100% - 24px));
   }
 
-  .mobile-site {
-    display: block;
+  .topbar-inner {
+    min-height: auto;
+    padding: 12px 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 10px 14px;
   }
 
-  .m-hero h1 {
-    font-size: clamp(52px, 12vw, 72px);
+  .top-links {
+    grid-column: 1 / -1;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 16px;
   }
 
-  .m-head h2,
-  .m-project h2 {
-    font-size: clamp(42px, 10vw, 58px);
+  .hero {
+    padding: 40px 0 54px;
   }
 
-  .about-mobile-main {
-    padding-bottom: 8px;
+  .hero-copy h1 {
+    font-size: clamp(36px, 9.8vw, 52px);
   }
 
-  .ps-mobile-main .m-head h2 {
-    font-size: clamp(36px, 9vw, 48px);
+  .hero-lead {
+    font-size: 18px;
+    margin: 18px 0 22px;
   }
 
-  .contact-mobile-main {
-    padding-bottom: 10px;
+  .hero-actions,
+  .trust-row {
+    flex-wrap: wrap;
+  }
+
+  .hero-window {
+    width: 100%;
+  }
+
+  .hero-scene {
+    min-height: 320px;
+  }
+
+  .section-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .section-head h2 {
+    max-width: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-collage {
+    grid-template-columns: 1fr;
+  }
+
+  .services-copy h2 {
+    font-size: clamp(34px, 8vw, 46px);
+  }
+
+  .cta-card {
+    padding: 44px 20px;
+  }
+
+  .cta-card h2 {
+    font-size: clamp(34px, 8vw, 44px);
+  }
+
+  .cta-card p {
+    font-size: 17px;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-hero-content h1 {
+    font-size: clamp(36px, 9vw, 52px);
+  }
+
+  .about-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ps-hero-copy h1 {
+    font-size: clamp(34px, 8.6vw, 50px);
+  }
+
+  .ps-hero-copy p {
+    font-size: 17px;
+  }
+
+  .contact-main {
+    padding: 42px 0 42px;
+  }
+
+  .contact-info-col h2,
+  .contact-form-card h2 {
+    font-size: 30px;
+  }
+
+  .contact-form-card {
+    padding: 28px 22px 22px;
+  }
+
+  .contact-field label {
+    font-size: 15px;
+  }
+
+  .contact-field input,
+  .contact-field select,
+  .contact-field textarea {
+    font-size: 16px;
+  }
+
+  .contact-field textarea {
+    min-height: 160px;
+  }
+
+  .contact-submit {
+    min-height: 52px;
+    font-size: 17px;
+  }
+
+  .contact-cta {
+    padding: 44px 0 54px;
+  }
+
+  .contact-cta-card {
+    padding: 44px 18px;
+  }
+
+  .contact-cta-card h2 {
+    font-size: clamp(34px, 8vw, 42px);
+  }
+
+  .contact-cta-card > p {
+    font-size: 18px;
+    line-height: 1.45;
+  }
+
+  .contact-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .contact-footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-footer-legal {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
 @media (max-width: 460px) {
-  .mobile-title {
-    font-size: 26px;
+  .container {
+    width: min(1160px, calc(100% - 18px));
   }
 
-  .mobile-main {
-    padding: 20px 14px 8px;
+  .topbar-inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 10px;
   }
 
-  .m-hero {
-    padding: 24px 18px 20px;
+  .brand-name {
+    font-size: 17px;
   }
 
-  .m-hero p {
+  .top-links {
+    font-size: 12px;
+    gap: 8px 12px;
+  }
+
+  .top-controls {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(30px, 10vw, 40px);
+  }
+
+  .hero-lead {
     font-size: 16px;
   }
 
-  .m-stat strong {
-    font-size: 22px;
+  .hero-scene {
+    min-height: 260px;
   }
 
-  .m-stat span {
+  .section {
+    padding: 52px 0;
+  }
+
+  .section-head h2 {
+    font-size: clamp(28px, 8.4vw, 34px);
+  }
+
+  .services-copy h2 {
+    font-size: clamp(30px, 8.6vw, 36px);
+  }
+
+  .service-list h3 {
+    font-size: 19px;
+  }
+
+  .about-values-grid,
+  .about-team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-team-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .about-history h2,
+  .about-values h2,
+  .about-team-head h2 {
+    font-size: clamp(30px, 8.6vw, 36px);
+  }
+
+  .ps-hero-copy h1 {
+    font-size: clamp(30px, 8.8vw, 38px);
+  }
+
+  .ps-side-panel {
+    min-height: 84px;
+  }
+
+  .contact-form-card {
+    padding: 22px 14px 16px;
+  }
+
+  .contact-form-card h2 {
+    font-size: 30px;
+  }
+
+  .contact-info-col h2 {
+    font-size: 28px;
+  }
+
+  .contact-info-item h3 {
+    font-size: 17px;
+  }
+
+  .contact-field label {
     font-size: 14px;
   }
 
-  .m-service-card p,
-  .m-project p {
+  .contact-field input,
+  .contact-field select,
+  .contact-field textarea {
+    font-size: 15px;
+    padding: 12px 12px;
+  }
+
+  .contact-submit {
+    min-height: 50px;
     font-size: 16px;
   }
 
-  .about-mobile-title {
+  .contact-cta-card {
+    padding: 36px 14px;
+  }
+
+  .contact-cta-card > p {
     font-size: 16px;
-  }
-
-  .about-m-hero {
-    min-height: 220px;
-    padding: 38px 16px 18px;
-  }
-
-  .about-m-hero h1 {
-    font-size: 48px;
-  }
-
-  .about-m-quote p {
-    font-size: 16px;
-  }
-
-  .about-m-timeline h2,
-  .about-m-team h2 {
-    font-size: 40px;
-  }
-
-  .about-m-member h3 {
-    font-size: 18px;
-  }
-
-  .ps-mobile-title {
-    font-size: 13px;
-  }
-
-  .ps-m-hero {
-    margin: 0 14px;
-  }
-
-  .ps-m-hero h1 {
-    font-size: 30px;
-  }
-
-  .contact-mobile-title {
-    font-size: 30px;
-  }
-
-  .contact-m-form-wrap h1 {
-    font-size: 52px;
-  }
-
-  .contact-m-form-wrap p {
-    font-size: 18px;
   }
 }
