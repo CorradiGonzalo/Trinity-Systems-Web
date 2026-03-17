@@ -994,6 +994,12 @@ h3,
   grid-template-columns: 1.05fr 1fr;
   gap: 44px;
   align-items: start;
+  min-width: 0;
+}
+
+.about-mv-left,
+.about-mv-right {
+  min-width: 0;
 }
 
 .about-mv-left h2 {
@@ -1019,6 +1025,12 @@ h3,
   display: flex;
   align-items: flex-start;
   gap: 14px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.about-info-card > div {
+  min-width: 0;
 }
 
 .about-info-icon {
@@ -1060,19 +1072,26 @@ h3,
   color: #697a94;
   font-size: 12px;
   line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 .about-team-panel {
+  width: 100%;
   min-height: 300px;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 10;
   border-radius: 10px;
   border: 4px solid #f3f5ec;
   background-color: #06101c;
-  background-image: url("../assets/img/TeamNatal.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  overflow: hidden;
   box-shadow: 0 15px 38px rgba(41, 58, 78, 0.2);
+}
+
+.about-team-panel img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .about-history {
@@ -1988,6 +2007,19 @@ h3,
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .about-mv {
+    padding: 48px 0;
+  }
+
+  .about-mv-grid {
+    gap: 16px;
+  }
+
+  .about-team-panel {
+    min-height: clamp(220px, 48vw, 300px);
+    border-width: 2px;
+  }
+
   .about-footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2282,6 +2314,25 @@ h3,
   .about-values h2,
   .about-team-head h2 {
     font-size: clamp(30px, 8.6vw, 36px);
+  }
+
+  .about-info-card {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .about-info-card h3 {
+    font-size: 16px;
+  }
+
+  .about-info-card p {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .about-team-panel {
+    min-height: 190px;
+    border-width: 2px;
   }
 
   .ps-hero-copy h1 {
